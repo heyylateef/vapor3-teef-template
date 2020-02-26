@@ -13,6 +13,6 @@ ALTER USER "new-postgres-user" PASSWORD 'myPassword'; (Note: keep single quote m
 
 
 4. Create database
-sudo -u postgres createdb lateef
+sudo -u "new-postgres-user" createdb "database-name"
 
 
