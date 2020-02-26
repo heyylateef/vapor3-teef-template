@@ -18,3 +18,20 @@
         <img src="http://img.shields.io/badge/swift-5.1-brightgreen.svg" alt="Swift 5.1">
     </a>
 </p>
+
+**The following tutuorial is to use PostgreSQL in Vapor 3. Tested with Ubuntu 18.04
+
+1. Install postgreSQL:
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+2. Set new postgres user:
+sudo -u postgres createuser --interactive
+
+3. Set password for user: (Note: Password must be set in config file, Vapor 3 on Ubuntu won't run otherwise)
+sudo -u "new-postgres-user" psql
+ALTER USER "new-postgres-user" PASSWORD 'myPassword'; (Note: keep single quote marks for setting password)
+
+
+4. Create database
+sudo -u "new-postgres-user" createdb "database-name"
